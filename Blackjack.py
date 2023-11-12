@@ -49,7 +49,7 @@ def new_match(bank):
     e) The dealer's turn, tries to at least tie the player's value
     f) Checks results
     :param bank: The current amount of money that the player has
-    :return: The status of the match, Win, Push (Tie) or Lose, and the bank profit
+    :return: The status of the match, Win, Push (Tie) or Lose, and the updated bank
     """
     bet = input("Please place your bet: ")
     while not valid_bet(bet, bank):
@@ -69,9 +69,9 @@ def new_match(bank):
     if blackjack(player_value):
         if blackjack(dealer_value):
             print("Even match")
-            return "Push", 0
+            return "Push", bank
         print("Nice blackjack!")
-        return "Win", bet * 1.5
+        return "Win", bank + bet * 1.5
 
     # Checking insurance scenario. This bet is independent, so results go directly to bank
     if dealer_cards[1] == 'A':
@@ -80,8 +80,10 @@ def new_match(bank):
             choice = input()
             if choice == 'y':
                 if dealer_cards[0] == 10:
-                    bank += bet
+                    print(f"Dealer had an blackjack! You won {bet}")
+                    bank += bet  # This is 2 * half of the bet
                 else:
+                    print(f"Dealer doesn't have blackjack, you lose {0.5 * bet}")
                     bank -= 0.5 * bet
 
     # Checking split scenario
@@ -91,7 +93,7 @@ def new_match(bank):
             choice = input()
             if choice == "y":
                 #  Split's game logic within split function
-                return split(deck, player_cards[0], dealer_cards, bet)
+                return split(deck, player_cards[0], dealer_cards, bet, bank)
 
     # Player's turn
     print("Press h to hit")
@@ -110,18 +112,18 @@ def new_match(bank):
 
     if is_busted(player_value):
         print("You busted :/")
-        return "Lose", -bet
+        return "Lose", bank - bet
     print("Your turn is over. Dealer's turn now.")
     dealer_value = dealer_turn(dealer_cards, player_value, deck)
     if is_busted(dealer_value):
         print("Dealer busted!")
-        return "Win", bet
+        return "Win", bank + bet
     if dealer_value == player_value:
         print("It's a tie!")
-        return "Push", 0
+        return "Push", bank  # No changes
 
     print("Too bad")  # If dealer not busted and didn't tie, he definitely won
-    return "Lose", -bet
+    return "Lose", bank - bet
 
 
 def initialize_deck():
@@ -204,17 +206,19 @@ def double_down(cards, deck):
     return value
 
 
-def split(deck, initial_card, dealer_cards, bet):
+def split(deck, initial_card, dealer_cards, bet, bank):
     """
     Handles split's game logic, as they're very quite different from normal matches
     a) No double allowed
-    b) The player allowed to hit on any of his hands.
-    c) The dealer tries to at least tie one hand.
+    b) No blackjack allowed
+    c) The player allowed to hit on any of his hands.
+    d) The dealer tries to at least tie one hand.
     :param deck: Current deck of cards
     :param initial_card: The first card given to each of the player's hands
     :param dealer_cards: A list of all dealer's cards
     :param bet: The sum of bet for each hand.
-    :return: The final result, "Win", "Push" or "Lose", and the profit
+    :param bank: The current bank of the player.
+    :return: The final result, "Win", "Push" or "Lose", and the updated bank
     """
     first_hand = [initial_card, deck.pop()]
     second_hand = [initial_card, deck.pop()]
@@ -248,16 +252,16 @@ def split(deck, initial_card, dealer_cards, bet):
 
     if is_busted(dealer_value):
         print("Dealer busted!")
-        return "Win", bet * 2
+        return "Win", bank + bet * 2
     if dealer_value == high_player_value:
         print("Dealer won lower hand, tied higher hand")
-        return "Lose", -bet
+        return "Lose", bank - bet
     elif low_player_value < dealer_value < high_player_value:
         print("Dealer won low hand and lost to high hand")
-        return "Push", 0
+        return "Push", bank  # No change
     else:  # There's no scenario of dealer ending up lower than low hand
         print("Dealer tied lower hand and lost to high hand")
-        return "Win", bet
+        return "Win", bank + bet
 
 
 def main():
@@ -265,15 +269,15 @@ def main():
     choice = 1
     print("Welcome! Let's play blackjack! Your initial bank is 1000")
     while choice != '0':
-        result, profit = new_match(bank)
-        bank += profit
+        result, updated_bank = new_match(bank)
+        bank = updated_bank
         print(f"Match result is {result}")
         print(f"Your current bank is {bank}")
         if bank == 0:
             print("Sorry, no more money left. Better luck next time!")
             break
         choice = input("Type 0 to exit, anything else to play again! \n")
-
+    print(f"Final score is {bank}, gg")
 
 if __name__ == "__main__":
     main()
