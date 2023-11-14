@@ -1,6 +1,7 @@
 from src.dealer_logic import dealer_turn
 from src.game_moves import hit
 from src.utility import calculate_deck_value, is_busted
+from src.logger_setup import global_logger as logger
 
 
 def split(deck, initial_card, dealer_cards, bet, bank):
@@ -19,8 +20,8 @@ def split(deck, initial_card, dealer_cards, bet, bank):
     """
     first_hand = [initial_card, deck.pop()]
     second_hand = [initial_card, deck.pop()]
-    print(f"Your first hand is {first_hand}")
-    print(f"Your second hand is {second_hand}")
+    logger.info(f"Your first hand is {first_hand}")
+    logger.info(f"Your second hand is {second_hand}")
 
     # Player's turn
     choice = input("Do you want to hit on your first hand? h for yes, anything else for no \n")
@@ -29,7 +30,7 @@ def split(deck, initial_card, dealer_cards, bet, bank):
     else:
         first_value = calculate_deck_value(first_hand)
     if is_busted(first_value):
-        print("First hand busted :/")
+        logger.info("First hand busted :/")
         first_value = 0  # Easier solution than rewriting logic later
 
     choice = input("Do you want to hit on your second hand? h for yes, anything else for no \n")
@@ -38,9 +39,9 @@ def split(deck, initial_card, dealer_cards, bet, bank):
     else:
         second_value = calculate_deck_value(second_hand)
     if is_busted(second_value):
-        print("Second hand busted :/")
+        logger.info("Second hand busted :/")
         second_value = 0  # Easier solution than rewriting logic later
-    print("Your turn is over. Dealer's turn now")
+    logger.info("Your turn is over. Dealer's turn now")
 
     # Dealer's turn. Will try to tie at least lower hand
     low_player_value = min(first_value, second_value)
@@ -48,14 +49,14 @@ def split(deck, initial_card, dealer_cards, bet, bank):
     dealer_value = dealer_turn(dealer_cards, low_player_value, deck)
 
     if is_busted(dealer_value):
-        print("Dealer busted!")
+        logger.info("Dealer busted!")
         return "Win", bank + bet * 2
     if dealer_value == high_player_value:
-        print("Dealer won lower hand, tied higher hand")
+        logger.info("Dealer won lower hand, tied higher hand")
         return "Lose", bank - bet
     elif low_player_value < dealer_value < high_player_value:
-        print("Dealer won low hand and lost to high hand")
+        logger.info("Dealer won low hand and lost to high hand")
         return "Push", bank  # No change
     else:  # There's no scenario of dealer ending up lower than low hand
-        print("Dealer tied lower hand and lost to high hand")
+        logger.info("Dealer tied lower hand and lost to high hand")
         return "Win", bank + bet

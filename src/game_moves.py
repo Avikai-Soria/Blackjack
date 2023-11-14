@@ -1,4 +1,5 @@
 from src.utility import calculate_deck_value
+from src.logger_setup import global_logger as logger
 
 
 def hit(cards, deck):
@@ -13,7 +14,7 @@ def hit(cards, deck):
     while choice == "h":
         cards += [deck.pop()]
         value = calculate_deck_value(cards)
-        print(f"Your hand is {cards} with a value of {value}")
+        logger.info(f"Your hand is {cards} with a value of {value}")
         if value > 21:
             return value
         choice = input("Press h to hit again, anything else to stand \n")
@@ -30,5 +31,5 @@ def double_down(cards, deck):
     """
     cards += [deck.pop()]
     value = calculate_deck_value(cards)
-    print(f"Your hand is {cards} with a value of {value}")
+    logger.info(f"Your hand is {cards} with a value of {value}")
     return value

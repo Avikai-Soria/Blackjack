@@ -1,4 +1,5 @@
 from src.utility import valid_bet
+from src.logger_setup import global_logger as logger
 
 
 def get_valid_bet(bank):
@@ -11,7 +12,7 @@ def get_valid_bet(bank):
         bet = input("Please place your bet: ")
         if valid_bet(bet, bank):
             return int(bet)
-        print("Please place a valid bet.")
+        logger.info("Please place a valid bet.")
 
 
 def handle_split(player_cards, bet, bank):
@@ -23,7 +24,7 @@ def handle_split(player_cards, bet, bank):
     :return: True if player can and want to split. False otherwise
     """
     if player_cards[0] == player_cards[1] and bet * 2 <= bank:
-        print("Do you want to split? Press y for yes, anything else for no ")
+        logger.info("Do you want to split? Press y for yes, anything else for no ")
         choice = input()
         if choice == "y":
             return True

@@ -1,5 +1,7 @@
 import random
 
+from src.logger_setup import global_logger as logger
+
 BLACKJACK_VALUE = 21
 
 
@@ -22,10 +24,10 @@ def valid_bet(bet, bank):
     try:
         bet = int(bet)
     except ValueError:
-        print("bet must be an integer.")
+        logger.error("Bet must be an integer.")
         return False
     if not 0 < bet <= bank:
-        print("Bet must be positive lower than current bank")
+        logger.error("Bet must be positive lower than current bank")
         return False
     return True
 

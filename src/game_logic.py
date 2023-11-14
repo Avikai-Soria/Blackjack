@@ -1,5 +1,6 @@
 from src.dealer_logic import dealer_turn
 from src.game_moves import hit, double_down
+from src.logger_setup import global_logger as logger
 from src.player_choice_handler import get_valid_bet, handle_split
 from src.side_bets_handler import handle_blackjack, handle_insurance
 from src.split_handler import split
@@ -26,8 +27,8 @@ def new_match(bank):
 
     player_value = calculate_deck_value(player_cards)
     dealer_value = calculate_deck_value(dealer_cards)
-    print(f"Your hand is {player_cards} with a value of {player_value}")
-    print(f"Dealer's face-up card is {dealer_cards[1]}")
+    logger.info(f"Your hand is {player_cards} with a value of {player_value}")
+    logger.info(f"Dealer's face-up card is {dealer_cards[1]}")
 
     # Checking blackjack scenario
     blackjack_result = handle_blackjack(player_value, dealer_value, bet, bank)
@@ -44,10 +45,10 @@ def new_match(bank):
         return split(deck, player_cards[0], dealer_cards, bet, bank)
 
     # Player's turn
-    print("Press h to hit")
+    logger.info("Press h to hit")
     if bet * 2 <= bank:
-        print("Press d to double")
-    print("Press anything else to stand ")
+        logger.info("Press d to double")
+    logger.info("Press anything else to stand ")
     choice = input()
     match choice:
         case "h":
@@ -59,15 +60,15 @@ def new_match(bank):
                 player_value = double_down(player_cards, deck)
 
     if is_busted(player_value):
-        print("You busted :/")
+        logger.info("You busted :/")
         return "Lose", bank - bet
-    print("Your turn is over. Dealer's turn now.")
+    logger.info("Your turn is over. Dealer's turn now.")
     dealer_value = dealer_turn(dealer_cards, player_value, deck)
     if is_busted(dealer_value):
-        print("Dealer busted!")
+        logger.info("Dealer busted!")
         return "Win", bank + bet
     if dealer_value == player_value:
-        print("It's a tie!")
+        logger.info("It's a tie!")
         return "Push", bank  # No changes
-    print("Too bad")  # If dealer not busted and didn't tie, he definitely won
+    logger.info("Too bad")  # If dealer not busted and didn't tie, he definitely won
     return "Lose", bank - bet
