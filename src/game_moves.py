@@ -3,7 +3,7 @@ from src.utility import calculate_deck_value
 
 def hit(cards, deck):
     """
-    Allows to player to pick cards from the deck and add them to his cards
+    Picks a card, and asks the player continuously if he wants to hit again
     :param cards: Current user's list of cards
     :param deck: Current deck
     :return: The new value of the deck. Not the cards as they're no longer relevant

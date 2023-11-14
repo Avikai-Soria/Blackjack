@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Fixed bank issue and added prints to insurance">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dealer_logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game_logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game_moves.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player_choice_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/side_bets_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/split_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Blackjack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blackjack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Refactored file's architecture, and made code a bit more readable">
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_dealer_logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_game_moves.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_player_choice_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_side_bets_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game_moves.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_moves.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,53 +48,84 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_game_moves.py">
+    <configuration name="Python tests for test_dealer_logic.TestDealerTurn" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Blackjack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_dealer_logic.TestDealerTurn&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Blackjack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_player_choice_handler.TestGetValidBet.test_multiple_attempts&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_dealer_logic.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Blackjack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_dealer_logic.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_game_moves.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Blackjack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_game_moves.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_player_choice_handler.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Blackjack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_player_choice_handler.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in test_game_moves.py" />
+        <item itemvalue="Python tests.Python tests in test_player_choice_handler.py" />
+        <item itemvalue="Python tests.Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" />
+        <item itemvalue="Python tests.Python tests for test_dealer_logic.TestDealerTurn" />
+        <item itemvalue="Python tests.Python tests in test_dealer_logic.py" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699786796679</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactored file's architecture, and made code a bit more readable">
+      <option name="closed" value="true" />
+      <created>1699967019057</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699967019057</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +184,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A bit messed up structure but seems to work" />
     <MESSAGE value="Fixed bank issue and added prints to insurance" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bank issue and added prints to insurance" />
+    <MESSAGE value="Refactored file's architecture, and made code a bit more readable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored file's architecture, and made code a bit more readable" />
   </component>
 </project>
