@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Updated project to use logger instead of prints" />
+    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Updated project to use logger instead of prints">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logger_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logger_setup.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +49,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="LOG_FILE_PATH" value="C:\Users\mamag4\Desktop\Logs" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -117,6 +121,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python tests.Python tests for test_dealer_logic.TestDealerTurn" />
+      <item itemvalue="Python tests.Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" />
+      <item itemvalue="Python tests.Python tests in test_game_moves.py" />
+      <item itemvalue="Python tests.Python tests in test_player_choice_handler.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
@@ -189,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699974358956</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated project to use logger instead of prints">
+      <option name="closed" value="true" />
+      <created>1699976372217</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699976372217</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
