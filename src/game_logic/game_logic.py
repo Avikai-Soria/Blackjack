@@ -1,10 +1,10 @@
-from src.dealer_logic import dealer_turn
-from src.game_moves import hit, double_down
-from src.logger_setup import global_logger as logger
-from src.player_choice_handler import get_valid_bet, handle_split
-from src.side_bets_handler import handle_blackjack, handle_insurance
-from src.split_handler import split
-from src.utility import initialize_deck, deal_initial_cards, calculate_deck_value, is_busted
+from src.game_logic import dealer_turn
+from src.game_actions import hit, double_down
+from src.utils import initialize_deck, deal_initial_cards, calculate_deck_value, is_busted
+from src.utils import get_valid_bet, handle_split
+from src.special_moves import handle_blackjack, handle_insurance
+from src.special_moves import split
+from src.logs import logger
 
 
 def new_match(bank):

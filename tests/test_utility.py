@@ -1,5 +1,5 @@
 import unittest
-from src.utility import is_busted, valid_bet, is_blackjack, initialize_deck, deal_initial_cards, calculate_deck_value
+from src.utils import is_busted, valid_bet, is_blackjack, initialize_deck, deal_initial_cards, calculate_deck_value
 
 
 class TestIsBusted(unittest.TestCase):

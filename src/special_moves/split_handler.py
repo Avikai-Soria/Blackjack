@@ -1,7 +1,7 @@
-from src.dealer_logic import dealer_turn
-from src.game_moves import hit
-from src.utility import calculate_deck_value, is_busted
-from src.logger_setup import global_logger as logger
+from src.game_logic import dealer_turn
+from src.game_actions import hit
+from src.utils import calculate_deck_value, is_busted
+from src.logs import logger
 
 
 def split(deck, initial_card, dealer_cards, bet, bank):
@@ -51,12 +51,13 @@ def split(deck, initial_card, dealer_cards, bet, bank):
     if is_busted(dealer_value):
         logger.info("Dealer busted!")
         return "Win", bank + bet * 2
+
     if dealer_value == high_player_value:
         logger.info("Dealer won lower hand, tied higher hand")
         return "Lose", bank - bet
     elif low_player_value < dealer_value < high_player_value:
         logger.info("Dealer won low hand and lost to high hand")
         return "Push", bank  # No change
-    else:  # There's no scenario of dealer ending up lower than low hand
-        logger.info("Dealer tied lower hand and lost to high hand")
-        return "Win", bank + bet
+    # There's no scenario of dealer ending up lower than low hand
+    logger.info("Dealer tied lower hand and lost to high hand")
+    return "Win", bank + bet

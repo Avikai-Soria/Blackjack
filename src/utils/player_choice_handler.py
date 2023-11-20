@@ -1,5 +1,5 @@
-from src.utility import valid_bet
-from src.logger_setup import global_logger as logger
+from src.utils import valid_bet
+from src.logs import logger
 
 
 def get_valid_bet(bank):

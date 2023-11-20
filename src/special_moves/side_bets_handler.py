@@ -1,5 +1,5 @@
-from src.utility import is_blackjack
-from src.logger_setup import global_logger as logger
+from src.utils import is_blackjack
+from src.logs import logger
 
 
 def handle_insurance(dealer_cards, bet, bank):
@@ -11,8 +11,8 @@ def handle_insurance(dealer_cards, bet, bank):
     :return: False if the player didn't bet. The amount received if the player did
     """
     if dealer_cards[1] == 'A' and bet * 1.5 <= bank:
-        choice = input("Do you want insurance? Press y for yes, anything else for no\n")
-        if choice == 'y':
+        user_choice = input("Do you want insurance? Press y for yes, anything else for no\n")
+        if user_choice == 'y':
             if dealer_cards[0] == 10:
                 logger.info(f"Dealer had a blackjack! You won {bet}")
                 return bet * 2  # This is 2 * half of the bet
