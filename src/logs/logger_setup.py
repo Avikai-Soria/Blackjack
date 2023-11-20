@@ -7,7 +7,7 @@ from logging.handlers import RotatingFileHandler
 from src.logs.get_elasticsearch import get_elasticsearch_connection
 
 
-def setup_logger():
+def setup_logger(enable_elasticsearch=False):
     logger = logging.getLogger(__name__)
 
     logger.setLevel(logging.INFO)
@@ -43,9 +43,10 @@ def setup_logger():
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
 
-    # Add Elasticsearch handler
-    elasticsearch_handler = ElasticsearchHandler()
-    logger.addHandler(elasticsearch_handler)
+    # Add Elasticsearch handler if enabled
+    if enable_elasticsearch:
+        elasticsearch_handler = ElasticsearchHandler()
+        logger.addHandler(elasticsearch_handler)
 
     return logger
 
@@ -73,4 +74,6 @@ class ElasticsearchHandler(logging.Handler):
         self.elasticsearch.index(index=index_name, body=body)
 
 
-global_logger = setup_logger()
+# Create two global loggers, one with ElasticSearch export and one without
+global_logger = setup_logger(enable_elasticsearch=False)
+#  global_logger_with_elastic = setup_logger(enable_elasticsearch=True)
