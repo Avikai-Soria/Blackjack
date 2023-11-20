@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Made this one look nicer">
+    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Fixed imports in tests, all pass">
+      <change afterPath="$PROJECT_DIR$/http_ca.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logs/get_elasticsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_dealer_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_dealer_logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_game_moves.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_game_moves.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_player_choice_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_player_choice_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_side_bets_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_side_bets_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logs/logger_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/logger_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +57,15 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamag4/PycharmProjects/pythonProject/Tic_Tac_Toe&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamag4/PycharmProjects/pythonProject/Blackjack&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack" />
+      <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\src\logs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\src\special_moves" />
       <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\src\game_actions" />
@@ -70,7 +74,7 @@
       <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\src\logs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Blackjack" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,8 +162,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in test_game_moves.py" />
         <item itemvalue="Python tests.Python tests in test_player_choice_handler.py" />
         <item itemvalue="Python tests.Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" />
@@ -276,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700482869375</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed imports in tests, all pass">
+      <option name="closed" value="true" />
+      <created>1700483140819</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700483140819</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +312,7 @@
     <MESSAGE value="Refactored some stuff" />
     <MESSAGE value="Fixed imports error, need to understand better when to import in init" />
     <MESSAGE value="Made this one look nicer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made this one look nicer" />
+    <MESSAGE value="Fixed imports in tests, all pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed imports in tests, all pass" />
   </component>
 </project>

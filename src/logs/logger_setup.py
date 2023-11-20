@@ -4,6 +4,8 @@ import sys
 import time
 from logging.handlers import RotatingFileHandler
 
+from src.logs.get_elasticsearch import get_elasticsearch_connection
+
 
 def setup_logger():
     logger = logging.getLogger(__name__)
@@ -37,11 +39,38 @@ def setup_logger():
     console_formatter = logging.Formatter('%(message)s')
     console_handler.setFormatter(console_formatter)
 
-    # Add the handlers to the logger
+    # Add the file and console handlers to the logger
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
 
+    # Add Elasticsearch handler
+    elasticsearch_handler = ElasticsearchHandler()
+    logger.addHandler(elasticsearch_handler)
+
     return logger
+
+
+class ElasticsearchHandler(logging.Handler):
+    def __init__(self):
+        super().__init__()
+        self.elasticsearch = get_elasticsearch_connection()
+
+    def emit(self, record):
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        log_entry = self.format(record)
+
+        # Index name format: log-{current_timestamp}
+        index_name = f"log-{timestamp}"
+
+        # Body format
+        body = {
+            "@timestamp": timestamp,
+            "type": record.levelname,
+            "message": log_entry
+        }
+
+        # Send log entry to Elasticsearch
+        self.elasticsearch.index(index=index_name, body=body)
 
 
 global_logger = setup_logger()
