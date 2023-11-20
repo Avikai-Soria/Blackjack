@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Fixed imports error, need to understand better when to import in init">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Made this one look nicer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_dealer_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_dealer_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_game_moves.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_game_moves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_player_choice_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_player_choice_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_side_bets_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_side_bets_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +70,7 @@
       <recent name="C:\Users\mamag4\PycharmProjects\pythonProject\Blackjack\src\logs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Blackjack" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,20 +91,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_dealer_logic.TestDealerTurn" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Blackjack" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_dealer_logic.TestDealerTurn&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -144,20 +135,34 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Blackjack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python tests.Python tests for test_dealer_logic.TestDealerTurn" />
+      <item itemvalue="Python tests.Python tests in tests" />
       <item itemvalue="Python tests.Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" />
       <item itemvalue="Python tests.Python tests in test_game_moves.py" />
       <item itemvalue="Python tests.Python tests in test_player_choice_handler.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests in test_game_moves.py" />
         <item itemvalue="Python tests.Python tests in test_player_choice_handler.py" />
         <item itemvalue="Python tests.Python tests for test_player_choice_handler.TestGetValidBet.test_multiple_attempts" />
-        <item itemvalue="Python tests.Python tests for test_dealer_logic.TestDealerTurn" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700481165115</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made this one look nicer">
+      <option name="closed" value="true" />
+      <created>1700482869375</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700482869375</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +299,7 @@
     <MESSAGE value="Updated logger to support global environment path for logs" />
     <MESSAGE value="Refactored some stuff" />
     <MESSAGE value="Fixed imports error, need to understand better when to import in init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed imports error, need to understand better when to import in init" />
+    <MESSAGE value="Made this one look nicer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made this one look nicer" />
   </component>
 </project>

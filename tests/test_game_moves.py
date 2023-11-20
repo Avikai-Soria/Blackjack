@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from src.game_logic import hit, double_down
+from src.game_logic.game_logic import hit, double_down
 
 
 class TestHit(unittest.TestCase):

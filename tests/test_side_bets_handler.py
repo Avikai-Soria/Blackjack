@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from src.game_logic import handle_insurance, handle_blackjack
+from src.game_logic.game_logic import handle_insurance, handle_blackjack
 
 
 class TestHandleInsurance(unittest.TestCase):

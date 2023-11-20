@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from src.game_logic import get_valid_bet, handle_split
+from src.game_logic.game_logic import get_valid_bet, handle_split
 
 
 class TestGetValidBet(unittest.TestCase):
