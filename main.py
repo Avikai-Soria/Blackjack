@@ -1,4 +1,4 @@
-from src.game_logic import new_match
+from src.game_logic.game_logic import new_match
 from src.logs import logger
 
 

@@ -1,4 +1,4 @@
-from src.utils import valid_bet
+from src.utils.utils import valid_bet
 from src.logs import logger
 
 

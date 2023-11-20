@@ -1,6 +1,7 @@
-from src.game_logic import dealer_turn
-from src.game_actions import hit
-from src.utils import calculate_deck_value, is_busted
+from src.game_logic.dealer_logic import dealer_turn
+from src.game_actions.game_moves import hit
+from src.utils import calculate_deck_value
+from src.utils.utils import is_busted
 from src.logs import logger
 
 

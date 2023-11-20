@@ -1,9 +1,11 @@
-from src.game_logic import dealer_turn
-from src.game_actions import hit, double_down
-from src.utils import initialize_deck, deal_initial_cards, calculate_deck_value, is_busted
-from src.utils import get_valid_bet, handle_split
-from src.special_moves import handle_blackjack, handle_insurance
-from src.special_moves import split
+from src.game_logic.dealer_logic import dealer_turn
+from src.game_actions.game_moves import hit, double_down
+from src.utils.initializers import initialize_deck, deal_initial_cards
+from src.utils import calculate_deck_value
+from src.utils.utils import is_busted
+from src.utils.player_choice_handler import get_valid_bet, handle_split
+from src.special_moves.side_bets_handler import handle_blackjack, handle_insurance
+from src.special_moves.split_handler import split
 from src.logs import logger
 
 

@@ -1,4 +1,4 @@
-from src.utils import is_blackjack
+from src.utils.utils import is_blackjack
 from src.logs import logger
 
 
