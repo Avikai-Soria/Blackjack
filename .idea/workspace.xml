@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Refactored some stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game_actions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_actions/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game_logic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_logic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game_logic/game_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_logic/game_logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/special_moves/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/special_moves/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/special_moves/side_bets_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/special_moves/side_bets_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/special_moves/split_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/special_moves/split_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/player_choice_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/player_choice_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.py" afterDir="false" />
+    <list default="true" id="08a2be1a-7a1b-4fdd-b1bb-fc073fad15a8" name="Changes" comment="Fixed imports error, need to understand better when to import in init">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700480167729</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed imports error, need to understand better when to import in init">
+      <option name="closed" value="true" />
+      <created>1700481165115</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700481165115</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +285,7 @@
     <MESSAGE value="Updated project to use logger instead of prints" />
     <MESSAGE value="Updated logger to support global environment path for logs" />
     <MESSAGE value="Refactored some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored some stuff" />
+    <MESSAGE value="Fixed imports error, need to understand better when to import in init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed imports error, need to understand better when to import in init" />
   </component>
 </project>

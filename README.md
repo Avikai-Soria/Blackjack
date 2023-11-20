@@ -1,10 +1,30 @@
-The game is Blackjack, also known as 21.
-Each card worth its value, while Prince, Queen and King are worth 10
-Aces are special, as they will worth either 11 or 1, depends on what value is better for you
-The goal is to get the sum of cards to 21, or as close as possible.
-If you accidentally exceed 21, you lose your bet.
-If you managed to hit a Blackjack, which means get 10 + Ace, you'll be rewarded extra coins
-You can side bet on Insurance in case the dealer's up card is Ace.
-You can split your hand if you have enough money and both of your first 2 cards has same value
-Losing means losing the sum you bet. Tie doesn't lose or gain money.
-Good luck!
+# Blackjack (21) Game
+
+Welcome to the exciting world of Blackjack! Test your luck and strategy in this classic card game.
+
+## Rules
+
+- Each card is worth its face value.
+- Face cards (Prince, Queen, and King) are worth 10 points each.
+- Aces are special and can be worth either 11 or 1, depending on which value benefits you more.
+- The goal is to reach a sum of 21 or as close as possible without exceeding it.
+- If your card total exceeds 21, you lose your bet.
+- Achieve a Blackjack by getting a 10 and an Ace, and you'll be rewarded with extra coins.
+- Consider an Insurance side bet when the dealer's up card is an Ace.
+- If you have enough funds and receive two cards of the same value, you can choose to split your hand.
+- Losing means forfeiting the sum you bet, while a tie results in no monetary gain or loss.
+
+## How to Play
+
+1. Start by placing your bet.
+2. Receive two cards and decide whether to hit, stand, double down, or split.
+3. Aim for a sum of 21 without going over.
+4. Enjoy the thrill of the game and good luck!
+
+## Special Features
+
+- **Blackjack Bonus:** Earn extra coins for hitting a Blackjack.
+- **Insurance:** Consider an additional bet when the dealer's up card is an Ace.
+- **Splitting:** Divide your hand into two separate hands if your initial cards have the same value.
+
+Have fun playing Blackjack, and may the odds be in your favor!
